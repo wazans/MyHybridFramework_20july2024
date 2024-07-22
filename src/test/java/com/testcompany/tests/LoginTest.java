@@ -1,7 +1,7 @@
 package com.testcompany.tests;
 
 import com.testcompany.base.BaseTest;
-import com.testcompany.pages.LoginPage;
+import com.testcompany.pages.LoginPage_PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ public class LoginTest extends BaseTest {
     /*
     Instance of LoginPage.
      */
-    public LoginPage lp;
+    public LoginPage_PageFactory lp;
 
     public LoginTest() throws IOException {
         super();
@@ -29,13 +29,14 @@ public class LoginTest extends BaseTest {
         /*
         Initializes the LoginPage instance (lp).
          */
-        lp = new LoginPage(driver);
+        lp = new LoginPage_PageFactory(driver);
         lp.enterUsername(username);
         lp.enterPassword(password);
     }
 
     @Test
     public void LoginTestSequence() {
+
         lp.selectLocation();
         lp.clickLoginButton();
     }

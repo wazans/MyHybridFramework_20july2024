@@ -47,7 +47,6 @@ public class BaseTest {
     @BeforeClass
     public static void initialization(){
         String browserName = prop.getProperty("browserName");
-
         if(browserName.equals("chrome"))
         {
             //System.setProperty("webdriver.chrome.driver", "./Drivers//chromedriver.exe");

@@ -1,5 +1,6 @@
 package com.testcompany.pages;
 
+import com.testcompany.utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,13 +14,17 @@ public class LoginPage {
     private By location = By.id("Inpatient Ward");
     private By loginButton = By.id("loginButton");
 
+    private WaitUtils wait;
+
     // The constructor takes a WebDriver instance as a parameter and assigns it to the class's private driver variable.
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void enterUsername(String user) {
+
         WebElement usernameField = driver.findElement(username);
+        wait.waitForElementToBeVisible(usernameField,5);
         usernameField.sendKeys(user);
     }
 
