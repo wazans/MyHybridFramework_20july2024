@@ -1,19 +1,21 @@
 package com.testcompany.tests;
 
 import com.testcompany.base.BaseTest;
-import com.testcompany.pages.LoginPage_PageFactory;
+import com.testcompany.pages.LoginPage;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Listeners(com.testcompany.MyListenerPack.MyTestListens.class)
 public class LoginTest extends BaseTest {
 
     /*
     Instance of LoginPage.
      */
-    public LoginPage_PageFactory lp;
+    public LoginPage lp;
 
     public LoginTest() throws IOException {
         super();
@@ -29,7 +31,7 @@ public class LoginTest extends BaseTest {
         /*
         Initializes the LoginPage instance (lp).
          */
-        lp = new LoginPage_PageFactory(driver);
+        lp = new LoginPage(driver);
         lp.enterUsername(username);
         lp.enterPassword(password);
     }

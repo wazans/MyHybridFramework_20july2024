@@ -1,11 +1,11 @@
 package com.testcompany.base;
 
+import com.testcompany.utils.BaseLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
-public class BaseTest {
+public class BaseTest extends BaseLogger {
 
     /*
     WebDriver instance & Properties instance to hold configuration data.
@@ -69,12 +69,12 @@ public class BaseTest {
         driver.get(prop.getProperty("url"));
 
     }
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        if (driver != null) {
+//            driver.quit();
+//        }
+//    }
 
 
 }

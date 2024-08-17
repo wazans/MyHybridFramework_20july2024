@@ -1,12 +1,13 @@
 package com.testcompany.pages;
 
+import com.testcompany.utils.BaseLogger;
 import com.testcompany.utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class LoginPage {
+public class LoginPage extends BaseLogger {
     // The driver variable is declared as private to ensure it is only accessible within the LoginPage class.
     private WebDriver driver;
     private By username = By.id("username");
@@ -24,7 +25,7 @@ public class LoginPage {
     public void enterUsername(String user) {
 
         WebElement usernameField = driver.findElement(username);
-        wait.waitForElementToBeVisible(usernameField,5);
+        //wait.waitForElementToBeVisible(usernameField,5);
         usernameField.sendKeys(user);
     }
 
