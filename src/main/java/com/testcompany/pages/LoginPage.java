@@ -10,7 +10,9 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends BaseLogger {
     // The driver variable is declared as private to ensure it is only accessible within the LoginPage class.
     private WebDriver driver;
+
     private By username = By.id("username");
+
     private By password = By.id("password");
     private By location = By.id("Inpatient Ward");
     private By loginButton = By.id("loginButton");

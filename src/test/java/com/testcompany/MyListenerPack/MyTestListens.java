@@ -29,6 +29,7 @@ public class MyTestListens implements ITestListener {
     public void onTestFailure(ITestResult Result)
     {
         System.out.println("The name of the testcase failed is :"+Result.getName());
+
     }
 
     // When Test case get Skipped, this method is called.

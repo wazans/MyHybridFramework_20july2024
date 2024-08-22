@@ -27,7 +27,7 @@ public class LoginTest extends BaseTest {
         /*
         Calls the initialization() method from BaseTest to set up the WebDriver.
          */
-        //initialization();
+        initialization();
         /*
         Initializes the LoginPage instance (lp).
          */
@@ -45,7 +45,7 @@ public class LoginTest extends BaseTest {
     /*
     Flow Overview
             LoginTest Constructor:Calls BaseTest constructor to load properties.
-            BeforeTest_intiliasie Method:Calls initialization method to set up WebDriver.
+            @Before Class annotation is being called to set up WebDriver and launch browser.
             Initializes LoginPage and enters username and password.
             LoginTestSequence Method:
                     Selects location and clicks login button using LoginPage methods.

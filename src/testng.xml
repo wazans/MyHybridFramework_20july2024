@@ -8,8 +8,8 @@
         <parameter name="password" value="Admin123"/>
         <classes>
             <class name="com.testcompany.tests.LoginTest"/>
-<!--            <class name="com.testcompany.tests.ScheduleAppointmentTest"/>-->
-<!--            <class name="com.testcompany.tests.ManageServiceTypesTest"/>-->
+            <class name="com.testcompany.tests.ScheduleAppointmentTest"/>
+            <class name="com.testcompany.tests.ManageServiceTypesTest"/>
         </classes>
     </test>
 </suite>
